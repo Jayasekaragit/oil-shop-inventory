@@ -1,0 +1,45 @@
+.container {  display: grid;
+    grid-template-columns: 0.1fr 3.4fr 1.4fr 0.1fr 2.7fr;
+    grid-template-rows: 0.5fr 0.1fr 2.2fr 1.7fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". Navbar Navbar Navbar Navbar"
+      ". . . . ."
+      ". Products Products . CartItems"
+      ". Products Products . CartItems"
+      ". . . . .";
+  }
+  
+  .Navbar { grid-area: Navbar; }
+  
+  .CartItems { grid-area: CartItems; }
+  
+  .Products { grid-area: Products; }
+  
+  
+  html, body , .container {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* For presentation only, no need to copy the code below */
+  
+  .container * {
+    border: 1px solid red;
+    position: relative;
+  }
+  
+  .container *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  

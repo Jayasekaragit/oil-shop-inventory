@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background: #e0e0e0;
+}
+
+.glass-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.glass-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.glass-form input[type="submit"] {
+  background: #3d5afe;
+  color: white;
+  cursor: pointer;
+}
+
+.glass-form input[type="submit"]:hover {
+  background: #0031ca;
+}
+.loginText{
+  margin-bottom: 250px;
+}
