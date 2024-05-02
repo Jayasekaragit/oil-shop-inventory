@@ -2,11 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 60vh;
   background: #e0e0e0;
 }
 
 .glass-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 10px;

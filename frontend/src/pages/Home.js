@@ -4,6 +4,8 @@ import OilDetails from '../components/OilDetails'
 import OilForm from "../components/OilForm"
 import Sidebar from "../components/Sidebar"
 import { Newoil } from "../components/OilForm"
+import { Nav } from "react-bootstrap"
+import Navbar from "../components/Navbar"
 
 const Home = ()=>{
     const [changes,setChanges] = useState("");
@@ -24,6 +26,7 @@ const Home = ()=>{
 
     return(
         <div className="container">
+            <Navbar/>
             {/* <div className="oils">
                 {oils && oils.map((oil)=>(
                    <OilDetails key={oil._id} oil={oil}></OilDetails>

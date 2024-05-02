@@ -74,6 +74,18 @@ app.post('/adduser', (req, res) => {
     });
   });
 
+  app.post('/addProducts', (req, res) => {
+    const { name, price,barcode } = req.body;
+    const sql = "INSERT INTO `products` (`name`, `price`,`barcode`) VALUES (?, ?, ?)";
+    db.query(sql, [name, price, barcode], (err, data) => {
+      if (err) {
+        return res.json(err);
+      }
+      return res.status(200).json({ message: 'Item added Succesfully' });
+    });
+  });
+
+
 app.post('/login',(req,res)=>{
     const userQ = "SELECT * FROM `user` WHERE `email` = ? AND `password` = ? "
     db.query(userQ,[req.body.email,req.body.password],(err,data)=>{

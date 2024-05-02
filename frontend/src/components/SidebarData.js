@@ -8,7 +8,7 @@ export const SidebarData = [
     {
         title: "Home",
         icon:<AddHomeWorkIcon/>,
-        link:"/"
+        link:"/cashierDash"
     },
     {
         title: "Inventory",

@@ -5,6 +5,8 @@ import Table from "react-bootstrap/Table";
 import Columns from "react-columns";
 import Card from "react-bootstrap/Card";
 import axios from 'axios'
+import './cashier.css'
+import Sidebar from "../../../components/Sidebar";
 
 // var data = require("./db.json");
 
@@ -107,8 +109,10 @@ function BarcodeScanner() {
   ));
 
   return (
+    <>
     <div style={{ display: 'flex' }}>
       <div style={{ display: 'flex' }}>
+      {/* <Sidebar /> */}
     <div style={{ width: '80%' }}>
       <Form>
         <Form.Group controlId="formGroupSearch">
@@ -119,7 +123,7 @@ function BarcodeScanner() {
             value={searchBarcode}
             onChange={(e) => setSearchBarcode(e.target.value)}
             onKeyDown={handleKeyDown}
-          />
+            />
         </Form.Group>
       </Form>
       <br />
@@ -135,7 +139,7 @@ function BarcodeScanner() {
         <tbody>
           {results.filter(item => searchBarcode !== "" ? item.barcode.includes(searchBarcode) : item)
                    .map((data, index) => (
-            <tr key={index}>
+                     <tr key={index}>
               {/* <td><img src={data.img} alt="product" style={{ width: "50px" }}/></td> */}
               <td>{data.name}</td>
               <td>Rs {data.price}</td>
@@ -172,7 +176,7 @@ function BarcodeScanner() {
       <tr>
         <td colSpan="3">Total</td>
         <td>Rs {
-           cart.reduce((acc, current) => acc + (current.totalPrice || 0), 0).toFixed(2)
+          cart.reduce((acc, current) => acc + (current.totalPrice || 0), 0).toFixed(2)
         }</td>
       </tr>
     </tbody>
@@ -181,6 +185,7 @@ function BarcodeScanner() {
 </div>
 
     </div>
+  </>
   );
 }
 

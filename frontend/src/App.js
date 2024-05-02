@@ -12,6 +12,8 @@ import Counter from './pages/Counter';
 import Sidebar from './components/Sidebar';
 // import LoginForm from './pages/login/Login2';
 import Login2 from './pages/login/Login2';
+import AddOil from './pages/(logged-in)/inventory-manager/AddOil';
+import DashBoard from './pages/DashBoard';
 
 // import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
@@ -24,7 +26,7 @@ function App() {
           <Routes>
             <Route
             path="/"
-            element={<Home/>}
+            element={<Signup/>}
             />
           
             <Route
@@ -54,6 +56,10 @@ function App() {
             <Route
             path="/login2"
             element={<Login2/>}
+            />
+            <Route
+            path="/addProducts"
+            element={<AddOil/>}
             />
           </Routes>
         </div>
